@@ -32,7 +32,7 @@
 
 
 ### AI Algorithm that are used 
-In this code we would like to make a comparison between two different algorithm , The first algorithm are A-Star algorithm which can be found in #COLOR Snake. For the second algorithm we use Dijkstra Algorithm's and can be found on the #COLOR Snake
+In this code we would like to make a comparison between two different algorithm , The first algorithm are A-Star algorithm which can be found in Green Snake. For the second algorithm we use Dijkstra Algorithm's and can be found on the White Snake
 
 ### AI version 1 - Based on A-Star Algorithm
 A perfect strategy, ensuring filling the screen, but the speed is slow.
