@@ -5,18 +5,18 @@
 <h4><strong> Team Member </strong></h4>
 <ul> 
 	<li> 2101664624 -  Anindhito Irmandharu </li>
-	<li> 2101664624 -  Anindhito Irmandharu </li>
-	<li> 2101664624 -  Anindhito Irmandharu </li>
-	<li> 2101664624 -  Anindhito Irmandharu </li>
-	<li> 2101664624 -  Anindhito Irmandharu </li>
+	<li> 2101685351 -  Gusti Sadhu Jnanin Werkodara </li>
+	<li> 2101655720 -  Gerry Gelvianlo </li>
+	<li> 2101664624 -  -  </li>
+	<li> 2101664624 -  - </li>
 
 </ul>
 
 
 [LinkedID Anindhito Irmandharu](https://www.google.com) <br>
-[LinkedID I Gusti Sadhu  ](https://www.google.com) <br>
+[LinkedID Gusti Sadhu  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
+[LinkedID Gerry Gelvianlo  ]([LinkedID Braja   ](https://www.google.com) <br>) <br>
 [LinkedID Braja   ](https://www.google.com) <br>
-[LinkedID Gerry Gelvianlo  ](https://www.google.com) <br>
 [LinkedID Erik Godianto  ](https://www.google.com) <br>
 
 
