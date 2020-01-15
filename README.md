@@ -13,9 +13,9 @@
 </ul>
 
 
-[LinkedID Anindhito Irmandharu](https://www.google.com) <br>
-[LinkedID Gusti Sadhu  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
-[LinkedID Gerry Gelvianlo  ]([LinkedID Braja   ](https://www.google.com) <br>) <br>
+[LinkedID Anindhito Irmandharu](http://linkedin.com/in/anindhito-irmandharu) <br>
+[LinkedID Gusti Sadhu  ](https://id.linkedin.com/in/gusti-sadhu-jnanin-werkodara-2b1a01194) <br>
+[LinkedID Gerry Gelvianlo  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
 [LinkedID Braja   ](https://www.google.com) <br>
 [LinkedID Erik Godianto  ](https://www.google.com) <br>
 
