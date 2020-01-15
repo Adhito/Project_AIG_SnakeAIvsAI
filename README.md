@@ -79,7 +79,33 @@ queue2.pop(0)
 <hr>
 To visualize the clash of two different algorithm our team decide to use PyGame as a method for visualizing. We choose PyGame since it is one of the popular libraries and understandable to use. Below are the code that helps us visualize the two algorithm (A-Star and Dijkstra) that are used by Snakes at work.
 
+<br>
+
 The code snippet below are the key function and validation of how our program works but does not explain all function that are found in the source code. For further detail please refer to the python source code file
+
+### Starting the program
+Starting the Snake game program. FPSLOCK can be change to make game frame-per-second more faster or lower.
+``` python
+def main():
+    global FPSCLOCK, DISPLAYSURF, BASICFONT
+
+    pygame.init() #ini kyk frame set visible 
+    
+    # Set FPS 
+    FPSCLOCK = pygame.time.Clock() 
+    
+    # Set display size
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+    
+    # Set the font 
+    BASICFONT = pygame.font.Font('freesansbold.ttf', 18)  
+    pygame.display.set_caption('Snaky Game') 
+
+    showStartScreen() 
+    while True: 
+        runGame() 
+        showGameOverScreen() 
+```
 
 ### Initialize a random point.
 Initialize random start point for snake 1 and snake 2.
