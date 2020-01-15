@@ -35,7 +35,7 @@
 In this code we would like to make a comparison between two different algorithm , The first algorithm are A-Star algorithm which can be found in Green Snake. For the second algorithm we use Dijkstra Algorithm's and can be found on the White Snake
 
 ### AI version 1 - Based on A-Star Algorithm
-A-Star has similar complexity with Dijkstra but with added heuristic for each distance calculation.Heuristic that are used are Manhattan distance
+A-Star has similar complexity with Dijkstra but with added heuristic for each distance calculation.Heuristic that are used are longest path by following tail which mean the closer the snake to the tail, the smaller the cost is. This added code make the path taking more longer but makes the snake more agile (less crashing to each other).
 ``` python
 while len(queue1) != 0:
 head = queue1[0]f
