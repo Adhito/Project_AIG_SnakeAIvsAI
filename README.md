@@ -79,6 +79,7 @@ queue2.pop(0)
 <hr>
 To visualize the clash of two different algorithm our team decide to use PyGame as a method for visualizing. We choose PyGame since it is one of the popular libraries and understandable to use. Below are the code that helps us visualize the two algorithm (A-Star and Dijkstra) that are used by Snakes at work.
 
+The code snippet below are the key function and validation of how our program works but does not explain all function that are found in the source code. For further detail please refer to the python source code file
 
 ### Initialize a random point.
 Initialize random start point for snake 1 and snake 2.
@@ -100,7 +101,7 @@ Initialize random start point for snake 1 and snake 2.
 ```
 
 
-### Initialize Apple at a random location
+### Validation and Initialize Apple at a random location
 Putting an apple at a random location with validation to ensure the apple does not spawn within the snake body
 ``` python
 def getRandomLocation(worm1, worm2):
@@ -108,9 +109,11 @@ def getRandomLocation(worm1, worm2):
     while test_not_ok(temp, worm1) or test_not_ok(temp, worm2):
 	temp = {'x': random.randint(0, CELLWIDTH - 1), 'y': random.randint(0, CELLHEIGHT - 1)}
     return temp
-.
-.
-.
+    
+	.
+	.
+	.
+	
 
 apple = getRandomLocation(wormCoords1, wormCoords2)
 cal_distance(wormCoords1, wormCoords2)
@@ -118,4 +121,95 @@ cal_distance(wormCoords1, wormCoords2)
 
 <hr>
 
+### Validation for snake's when eating Apples
+When the snake eats an apple the corresponding snake should get longer according to how many Apple they eat.
+``` python
 
+if wormCoords1[HEAD]['x'] == apple['x'] and wormCoords1[HEAD]['y'] == apple['y']:
+    # don't remove worm's tail segment
+    apple = getRandomLocation(wormCoords1, wormCoords2) # set a new apple somewhere
+else:
+    del wormCoords1[-1] # remove worm's tail segment
+
+if wormCoords2[HEAD]['x'] == apple['x'] and wormCoords2[HEAD]['y'] == apple['y']:
+    # don't remove worm's tail segment
+    apple = getRandomLocation(wormCoords1, wormCoords2) # set a new apple somewhere
+else:
+    del wormCoords2[-1] # remove worm's tail segment
+
+# move the worm1 and 2 by adding a segment in the direction it is moving (also add new head to snake)
+if direction1 == UP:
+    newHead1 = {'x': wormCoords1[HEAD]['x'], 'y': wormCoords1[HEAD]['y'] - 1}
+elif direction1 == DOWN:
+    newHead1 = {'x': wormCoords1[HEAD]['x'], 'y': wormCoords1[HEAD]['y'] + 1}
+elif direction1 == LEFT:
+    newHead1 = {'x': wormCoords1[HEAD]['x'] - 1, 'y': wormCoords1[HEAD]['y']}
+elif direction1 == RIGHT:
+    newHead1 = {'x': wormCoords1[HEAD]['x'] + 1, 'y': wormCoords1[HEAD]['y']}
+
+if direction2 == UP:
+    newHead2 = {'x': wormCoords2[HEAD]['x'], 'y': wormCoords2[HEAD]['y'] - 1}
+elif direction2 == DOWN:
+    newHead2 = {'x': wormCoords2[HEAD]['x'], 'y': wormCoords2[HEAD]['y'] + 1}
+elif direction2 == LEFT:
+    newHead2 = {'x': wormCoords2[HEAD]['x'] - 1, 'y': wormCoords2[HEAD]['y']}
+elif direction2 == RIGHT:
+    newHead2 = {'x': wormCoords2[HEAD]['x'] + 1, 'y': wormCoords2[HEAD]['y']}
+
+#insert new head to worm coordinate
+wormCoords1.insert(0, newHead1)
+wormCoords2.insert(0, newHead2)
+
+```
+
+
+### Validation for snake's body when hitting each other 
+We added validation condition when the snake dies, and those are : 
+<ul> 
+	<li> When the snake has hit one of the other head or body. </li>
+	<li> When the snake has hit its own body </li>
+	<li> When the snake has hit the edge of the map </li>
+
+</ul>
+
+For the time being we do not add time-limit restriction so the snakes are free to compete without any time limit
+
+``` python
+
+#check if the worm 1 or worm 2 has hit one the the another worm head or  the edge
+if wormCoords1[HEAD]['x'] == -1 or wormCoords1[HEAD]['x'] == CELLWIDTH or wormCoords1[HEAD]['y'] == -1 or wormCoords1[HEAD]['y'] == CELLHEIGHT \
+    or wormCoords2[HEAD]['x'] == -1 or wormCoords2[HEAD]['x'] == CELLWIDTH or wormCoords2[HEAD]['y'] == -1 or wormCoords2[HEAD]['y'] == CELLHEIGHT \
+    or (wormCoords2[HEAD]['x'] == wormCoords1[HEAD]['x'] and wormCoords2[HEAD]['y'] == wormCoords1[HEAD]['y']) :
+    return # game over
+
+
+test = [*wormCoords1[1:],*wormCoords2[1:]] #combine snake1 and snake2 coordinate
+
+#check if worm 1 or worm 2 head hit their own body or another worm body
+for wormBody in test:
+    if (wormBody['x'] == wormCoords1[HEAD]['x'] and wormBody['y'] == wormCoords1[HEAD]['y']) or (wormBody['x'] == wormCoords2[HEAD]['x'] and wormBody['y'] == wormCoords2[HEAD]['y']):
+	return # game over
+
+```
+
+
+
+### Validation for snake's to try avoid other snakes 
+In the code snippet below are code for the snake's to try avoid hitting each other. 
+``` python
+def into_queue(coor, queue, visited, worm1, worm2):
+    if coor == (apple['x'],apple['y']): #if coordinate is the apple
+        return False
+    elif coor[0] < 0 or coor[0] >= CELLWIDTH: #if x coordinate in the border or outside of the screen
+        return False
+    elif coor[1]< 0 or coor[1]>= CELLHEIGHT: #if y coordinate in the border or outside of the screen
+        return False
+    elif coor  in queue: #if coordinate already in queue
+        return False
+    elif coor  in visited: #if coordinate already visited
+        return False
+    elif is_snake(coor[0], coor[1], worm1, worm2): #if the coordinate is the snake1 or snake2 body
+        return False
+    else:
+        return True
+```
