@@ -225,7 +225,7 @@ for wormBody in test:
 
 
 ### Validation for snake's to try avoid other snakes 
-In the code snippet below are code for the snake's to try avoid hitting each other. 
+In the code snippet below are code for the snake's to try avoid hitting each other.This in term lead to longer gameplay and less dying within the first few seconds.
 ``` python
 def into_queue(coor, queue, visited, worm1, worm2):
     if coor == (apple['x'],apple['y']): #if coordinate is the apple
