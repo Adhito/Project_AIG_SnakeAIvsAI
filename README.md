@@ -243,3 +243,17 @@ def into_queue(coor, queue, visited, worm1, worm2):
     else:
         return True
 ```
+
+
+
+
+### Scoreboard 
+We put a scoreboard so that we can see which snake is getting more points (Apple). 
+``` python
+def drawScore(score1, score2):
+    #method for drawing score
+    scoreSurf = BASICFONT.render('Score1: %s , Score2: %s' % (score1, score2), True, WHITE)
+    scoreRect = scoreSurf.get_rect()
+    scoreRect.topleft = (WINDOWWIDTH - 200, 10)
+    DISPLAYSURF.blit(scoreSurf, scoreRect)
+```
