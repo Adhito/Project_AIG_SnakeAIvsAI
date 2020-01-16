@@ -7,8 +7,8 @@
 	<li> 2101664624 -  Anindhito Irmandharu </li>
 	<li> 2101685351 -  Gusti Sadhu Jnanin Werkodara </li>
 	<li> 2101655720 -  Gerry Gelvianlo </li>
-	<li> 2101664624 -  -  </li>
-	<li> 2101664624 -  - </li>
+	<li> 2101649592 -  Braja  </li>
+	<li> 2101661175 -  Erik Godianto </li>
 
 </ul>
 
@@ -16,8 +16,8 @@
 [LinkedID Anindhito Irmandharu](http://linkedin.com/in/anindhito-irmandharu) <br>
 [LinkedID Gusti Sadhu  ](https://id.linkedin.com/in/gusti-sadhu-jnanin-werkodara-2b1a01194) <br>
 [LinkedID Gerry Gelvianlo  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
-[LinkedID Braja   ](https://www.google.com) <br>
-[LinkedID Erik Godianto  ](https://www.google.com) <br>
+[LinkedID Braja   ](https://www.linkedin.com/in/braja-tannady-86ab80194) <br>
+[LinkedID Erik Godianto  ](https://www.linkedin.com/in/erik-godianto-ba2a4a181) <br>
 
 
   <br/>
@@ -37,21 +37,19 @@ In this code we would like to make a comparison between two different algorithm 
 ### AI version 1 - Based on A-Star Algorithm
 A-Star has similar complexity with Dijkstra but with added heuristic for each distance calculation.Heuristic that are used are longest path by following tail which mean the closer the snake to the tail, the smaller the cost is. This added code make the path taking more longer but makes the snake more agile (less crashing to each other).
 ``` python
-while len(queue1) != 0:
-head = queue1[0]f
-visited1.append(head)
-up_grid = head[0], head[1] - 1
-down_grid = head[0], head[1] + 1
-left_grid = head[0] - 1, head[1]
-right_grid = head[0] + 1, head[1]
+    while len(queue1) != 0 :
+        head = queue1[0]
+        visited1.append(head)
+        up_grid = head[0], head[1] - 1
+        down_grid = head[0], head[1] + 1
+        left_grid = head[0] - 1, head[1]
+        right_grid = head[0] + 1, head[1]
 
-for grid in [up_grid, down_grid, left_grid, right_grid]:
-    if into_queue(grid, queue1, visited1,worm1, worm2):
-	queue1.append(grid)
-	if distance1[grid[1]][grid[0]] != 99999:
-	    distance1[grid[1]][grid[0]] = distance1[head[1]][head[0]] + 1 + abs(grid[0] - apple['x']) + abs(grid[1] - apple['y'])
-queue1.pop(0)
-    
+        for grid in [up_grid, down_grid, left_grid, right_grid]:
+            if into_queue(grid, queue1, visited1,worm1, worm2):
+                queue1.append(grid)
+                distance1[grid[1]][grid[0]] = distance1[head[1]][head[0]] + 1 + abs(grid[0] - worm1[-1]['x']) + abs(grid[1] - worm1[-1]['y']) #heuristic part
+        queue1.pop(0)
 ```
 <br>
   
