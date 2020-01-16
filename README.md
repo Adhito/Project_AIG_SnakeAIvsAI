@@ -75,6 +75,7 @@ queue2.pop(0)
 <br>  
 
 <hr>
+![Screenshot of Snaky Gameplay](https://raw.githubusercontent.com/Adhito/Project_AIG_SnakeAIvsAI/master/Images/Screen%20Shot%202020-01-15%20at%2014.37.48.png)
 To visualize the clash of two different algorithm our team decide to use PyGame as a method for visualizing. We choose PyGame since it is one of the popular libraries and understandable to use. Below are the code that helps us visualize the two algorithm (A-Star and Dijkstra) that are used by Snakes at work.
 
 <br>
