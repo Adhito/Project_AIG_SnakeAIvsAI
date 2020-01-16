@@ -13,11 +13,11 @@
 </ul>
 
 
-[LinkedID Anindhito Irmandharu](http://linkedin.com/in/anindhito-irmandharu) <br>
-[LinkedID Gusti Sadhu  ](https://id.linkedin.com/in/gusti-sadhu-jnanin-werkodara-2b1a01194) <br>
-[LinkedID Gerry Gelvianlo  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
-[LinkedID Braja   ](https://www.linkedin.com/in/braja-tannady-86ab80194) <br>
-[LinkedID Erik Godianto  ](https://www.linkedin.com/in/erik-godianto-ba2a4a181) <br>
+[LinkedIn Anindhito Irmandharu](http://linkedin.com/in/anindhito-irmandharu) <br>
+[LinkedIn Gusti Sadhu  ](https://id.linkedin.com/in/gusti-sadhu-jnanin-werkodara-2b1a01194) <br>
+[LinkedIn Gerry Gelvianlo  ](https://www.linkedin.com/in/gerry-gelvianlo-8311b01a0) <br>
+[LinkedIn Braja   ](https://www.linkedin.com/in/braja-tannady-86ab80194) <br>
+[LinkedIn Erik Godianto  ](https://www.linkedin.com/in/erik-godianto-ba2a4a181) <br>
 
 
   <br/>
